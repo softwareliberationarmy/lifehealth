@@ -4,7 +4,8 @@
   "description": "Web app for tracking your weight, running, workouts, and any other pertinent metrics",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon app.js"
   },
   "author": "softwareliberationarmy",
   "license": "ISC",
