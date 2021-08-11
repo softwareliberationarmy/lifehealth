@@ -1,3 +1,37 @@
 body{
-    background-color: greenyellow;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+main {
+    margin: 1rem;
+}
+.main-header {
+    background-color: #0c9b0c;
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 3.5rem;
+}
+.main-header__nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.main-header__item-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-header__item {
+    margin: 0 1rem;
+}
+.main-header__item a {
+    text-decoration: none;
+    color: white;
+}
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+    color: #09095e;
 }
