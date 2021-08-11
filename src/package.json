@@ -1,0 +1,11 @@
+{
+  "name": "lifehealth",
+  "version": "0.0.1",
+  "description": "Web app for tracking your weight, running, workouts, and any other pertinent metrics",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "softwareliberationarmy",
+  "license": "ISC"
+}
