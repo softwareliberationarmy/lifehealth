@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
+
 const showHtmlFile = require('./helpers/route-handlers');
+const running = require('./routes/running');
 
 const app = express();
 
@@ -9,8 +11,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/', showHtmlFile('index.html'));
 
+app.use('/running', running.routes);
+
 //construction handler
-for(const route of ['/running', '/weight', '/workouts']){
+for(const route of ['/weight', '/workouts']){
     app.get(route, showHtmlFile('construction.html'));
 }
 
