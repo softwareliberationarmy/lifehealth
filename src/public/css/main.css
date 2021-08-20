@@ -35,3 +35,18 @@ main {
 .main-header__item a.active {
     color: #09095e;
 }
+.formRow {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.distanceRow {
+    align-items: flex-start;
+}
+label {
+    width: 6rem;
+}
+input {
+    width: 8rem;
+}
