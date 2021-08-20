@@ -35,17 +35,17 @@ main {
 .main-header__item a.active {
     color: #09095e;
 }
-.formRow {
+.form-row {
     margin: 1rem 0;
     display: flex;
     align-items: center;
     width: 100%;
 }
-.distanceRow {
-    align-items: flex-start;
-}
-label {
+.form-row-label {
     width: 6rem;
+}
+.top-align {
+    align-items: flex-start;
 }
 input {
     width: 8rem;
