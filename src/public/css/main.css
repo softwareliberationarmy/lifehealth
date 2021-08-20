@@ -35,6 +35,7 @@ main {
 .main-header__item a.active {
     color: #09095e;
 }
+
 .form-row {
     margin: 1rem 0;
     display: flex;
@@ -47,6 +48,6 @@ main {
 .top-align {
     align-items: flex-start;
 }
-input {
+.form-row-input {
     width: 8rem;
 }
