@@ -6,4 +6,13 @@ const showHtmlFile = (filename) => {
     }
 }
 
-module.exports = showHtmlFile;
+const renderTemplate = (templateName, input) => {
+    return (_r, res, _n) => {
+        res.render(templateName, input);
+    }
+}
+
+module.exports ={
+    showHtmlFile,
+    renderTemplate
+};

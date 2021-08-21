@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 
-const showHtmlFile = require('./helpers/route-handlers');
+const { showHtmlFile } = require('./helpers/route-handlers');
 const running = require('./routes/running');
 
 const app = express();

@@ -3,19 +3,13 @@ const router = express.Router();
 
 const runnings = [];
 
-const showHtmlFile = require('../helpers/route-handlers');
+const { renderTemplate } = require('../helpers/route-handlers');
 
-router.get('/', (req,res,next) => {
-    res.render('run-home', {
-        runnings: runnings
-    });
-});
+router.get('/', renderTemplate('run-home', { runnings: runnings }));
 
-router.get('/add-run', (req,res,next) => {
-    res.render('run-add');
-});
+router.get('/add-run', renderTemplate('run-add'));
 
-router.post('/add-run', (req, res, next) => {
+router.post('/add-run', (req, res) => {
     const newRun = {
         rundate: req.body.rundate,
         distance: req.body.distance
