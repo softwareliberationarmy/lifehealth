@@ -21,6 +21,16 @@
     <main>
         <h1>Running!</h1>
 
+        <% if (runnings.length > 0) { %> 
+            <p>Recent Runs</p>
+            <ul>
+                <% for (let run of runnings) { %>
+                    <li><%= run.rundate %>, <%= run.distance %> miles</li>
+                <% } %>        
+            </ul>
+        <% } else { %>
+            <p>No Runs Logged</p>
+        <% } %> 
         <a href="/running/add-run">Add a run</a>
     </main>
 </body>

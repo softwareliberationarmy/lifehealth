@@ -6,8 +6,13 @@ const running = require('./routes/running');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 //serve static files from public folder
 app.use(express.static(path.join(__dirname, "public")));
+//parse body 
+app.use(express.urlencoded({extended: true}));
 
 app.get('/', showHtmlFile('index.html'));
 
