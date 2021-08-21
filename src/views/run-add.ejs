@@ -23,7 +23,7 @@
         <form action="/running/add-run" method="POST">
             <div class='form-row'>
                 <label class="form-row-label" for="rundate">Date</label>
-                <input class="form-row-input" type="date" name="rundate" id="rundate" />
+                <input class="form-row-input" type="date" name="rundate" id="rundate" value="<%= (new Date()).toLocaleDateString('en-CA') %>" />
             </div>
             <div class='form-row top-align'>
                 <label class="form-row-label" for="distance">Distance<br/>(miles)</label>

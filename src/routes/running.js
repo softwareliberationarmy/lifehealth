@@ -11,7 +11,9 @@ router.get('/', (req,res,next) => {
     });
 });
 
-router.get('/add-run', showHtmlFile('run-add.html'));
+router.get('/add-run', (req,res,next) => {
+    res.render('run-add');
+});
 
 router.post('/add-run', (req, res, next) => {
     const newRun = {
