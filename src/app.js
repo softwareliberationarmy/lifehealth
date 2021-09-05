@@ -19,8 +19,8 @@ app.get('/', renderTemplate('index'));
 app.use('/running', running.routes);
 
 //construction handler
-for(const route of ['/weight', '/workouts']){
-    app.get(route, renderTemplate('construction', { area: 'weight'}));
+for(const area of [{ name: 'weight', route: '/weight'}, { name: 'workouts', route: '/workouts'}]){
+    app.get(area.route, renderTemplate('construction', { area: area.name}));
 }
 
 //last resort handler
