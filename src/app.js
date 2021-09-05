@@ -20,7 +20,7 @@ app.use('/running', running.routes);
 
 //construction handler
 for(const route of ['/weight', '/workouts']){
-    app.get(route, showHtmlFile('construction.html'));
+    app.get(route, renderTemplate('construction', { area: 'weight'}));
 }
 
 //last resort handler
