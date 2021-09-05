@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Running</title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
+<%- include('includes/head.ejs', { title: 'Running'}) %>
 <body>
-    <header class="main-header">        
-        <nav class="main-header__nav">
-            <ul class="main-header__item-list">
-                <li class="main-header__item"><a href="/" class="active">Home</a></li>
-                <li class="main-header__item"><a href="/running">Running</a></li>
-                <li class="main-header__item"><a href="/weight">Weigh-ins</a></li>
-                <li class="main-header__item"><a href="/workouts">Workouts</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('includes/nav.ejs', { area: 'running'}) %>
     <main>
         <h1>Running!</h1>
 

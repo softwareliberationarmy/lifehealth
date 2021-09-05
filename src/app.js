@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 
-const { showHtmlFile } = require('./helpers/route-handlers');
+const { showHtmlFile, renderTemplate } = require('./helpers/route-handlers');
 const running = require('./routes/running');
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //parse body 
 app.use(express.urlencoded({extended: true}));
 
-app.get('/', showHtmlFile('index.html'));
+app.get('/', renderTemplate('index'));
 
 app.use('/running', running.routes);
 

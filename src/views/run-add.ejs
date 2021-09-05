@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Run</title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
+<%- include('includes/head.ejs', { title: 'Add Run'}) %>
 <body>
-    <header class="main-header">        
-        <nav class="main-header__nav">
-            <ul class="main-header__item-list">
-                <li class="main-header__item"><a href="/" class="active">Home</a></li>
-                <li class="main-header__item"><a href="/running">Running</a></li>
-                <li class="main-header__item"><a href="/weight">Weigh-ins</a></li>
-                <li class="main-header__item"><a href="/workouts">Workouts</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('includes/nav.ejs', { area: 'running'}) %>
     <main>
         <h1>Add a Run</h1>
         <form action="/running/add-run" method="POST">
