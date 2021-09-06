@@ -24,6 +24,6 @@ for(const area of [{ name: 'weight', route: '/weight'}, { name: 'workouts', rout
 }
 
 //last resort handler
-app.use(showHtmlFile('notfound.html'));
+app.use(renderTemplate('notfound'));
 
 app.listen(3000);
