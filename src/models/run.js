@@ -25,7 +25,6 @@ module.exports = class Run {
             runs.push(this);
             runs.sort((r1, r2) => {
                 const secondsDiff = Date.parse(r1.rundate) - Date.parse(r2.rundate);
-                console.log('secondsDiff', secondsDiff);
                 return secondsDiff;
             } );
             fs.writeFile(runfile, JSON.stringify(runs), (err) => {
