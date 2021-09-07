@@ -1,22 +1,18 @@
-const runnings = [];
+const Run = require('../models/run');
 
 const { renderTemplate } = require('../helpers/route-handlers');
 
-exports.getHome = renderTemplate('run-home', { runnings: runnings });
+exports.getHome = (req,res,next) => {
+    Run.getAllRuns(runs => {
+        res.render('run-home', { runnings: runs});
+    });
+}; 
 
 exports.getAddRun = renderTemplate('run-add');
 
 exports.postAddRun = (req, res) => {
-    const newRun = {
-        rundate: req.body.rundate,  //written as a string value
-        distance: req.body.distance
-    };
-    runnings.push(newRun);
-    runnings.sort((r1, r2) => {
-        const secondsDiff = Date.parse(r1.rundate) - Date.parse(r2.rundate);
-        console.log('secondsDiff', secondsDiff);
-        return secondsDiff;
-    } );
-    console.log('runnings', runnings);
+    const newRun = new Run(req.body.rundate,  //written as a string value
+        req.body.distance);
+    newRun.save();
     res.redirect('/running');
 };
