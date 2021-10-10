@@ -8,7 +8,9 @@
     "start": "nodemon app.js",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:test": "cypress run -s 'cypress/integration/**/*-spec.js'"
+    "cypress:test": "cypress run -s 'cypress/integration/**/*-spec.js'",
+    "cy-run": "start-server-and-test start http://localhost:3000 cypress:run",
+    "cy-open": "start-server-and-test start http://localhost:3000 cypress:open"
   },
   "author": "softwareliberationarmy",
   "license": "ISC",
@@ -20,7 +22,8 @@
     "cypress": "^8.5.0",
     "jest": "^27.0.6",
     "jest-extended": "^0.11.5",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "start-server-and-test": "^1.14.0"
   },
   "jest": {
     "setupFilesAfterEnv": [
