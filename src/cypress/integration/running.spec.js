@@ -2,8 +2,7 @@
 
 describe("running area", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/");
-    cy.contains("li.main-header__item a", "Running").click();
+    cy.visitArea('Running');
   });
 
   describe("on initialization", () => {

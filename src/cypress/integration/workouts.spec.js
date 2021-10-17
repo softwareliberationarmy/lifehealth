@@ -2,8 +2,7 @@
 
 describe('workouts area', () => {
     beforeEach(() => {
-        cy.visit("http://localhost:3000");
-        cy.contains('li.main-header__item a', 'Workouts').click();
+        cy.visitArea('Workouts');
     });
         
     it('should show under construction message', () => {

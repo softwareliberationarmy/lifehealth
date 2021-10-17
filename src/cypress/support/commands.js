@@ -23,3 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('visitArea', (areaName) => {
+    cy.visit('http://localhost:3000');
+    cy.contains('li.main-header__item a', areaName).click();
+})
