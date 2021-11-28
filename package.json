@@ -24,10 +24,5 @@
     "jest-extended": "^0.11.5",
     "nodemon": "^2.0.12",
     "start-server-and-test": "^1.14.0"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "jest-extended"
-    ]
   }
 }

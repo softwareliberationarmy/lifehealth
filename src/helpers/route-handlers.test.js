@@ -1,5 +1,5 @@
 const path = require('path');
-const showHtmlFile = require('./route-handlers');
+const { showHtmlFile } = require('./route-handlers');
 
 describe('route handling helper methods', () => {
     describe('showHtmlFile', () => {
