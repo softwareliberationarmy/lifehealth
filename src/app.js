@@ -8,10 +8,10 @@ const weight = require('./routes/weight');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', 'src/views');
 
 //serve static files from public folder
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, '..', "public")));
 //for parsing HTTP post message body 
 app.use(express.urlencoded({extended: true}));
 
