@@ -32,8 +32,11 @@ for (const area of [
 //last resort handler
 app.use(renderTemplate("notfound"));
 
-sequelize.sync().then((result) => {
-  app.listen(3000);
+sequelize
+    .sync()
+    // .sync({ force: true })
+    .then((result) => {
+        app.listen(3000);
 })
 .catch(err => {
     console.log(err);
