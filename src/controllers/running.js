@@ -14,7 +14,7 @@ exports.getAddRun = renderTemplate('run-add');
 
 exports.postAddRun = (req, res) => {
     console.log('new run', req.body);
-    const newRun = Run.create({
+    const newRun = req.user.createRun({
         runDate: req.body.rundate,
         miles: req.body.distance
     })
