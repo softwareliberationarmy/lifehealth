@@ -6,6 +6,8 @@ const { renderTemplate } = require("./helpers/route-handlers");
 const running = require("./routes/running");
 const weight = require("./routes/weight");
 const sequelize = require("./infra/database");
+const { dbStartupAndThen } = require('./infra/databaseStartup');
+
 const User = require("./models/user");
 const { defineModelRelationships } = require("./models/relationships");
 
@@ -46,24 +48,7 @@ app.use(renderTemplate("notfound"));
 
 defineModelRelationships();
 
-sequelize
-  .sync()
-  // .sync({ force: true })
-  .then((result) => {
-    return User.findByPk(1);
-  })
-  .then((user) => {
-    if (!user) {
-      return User.create({
-        name: "Kerry Patrick",
-        email: "themanfromsql@gmail.com",
-      });
-    }
-    return user;
-  })
-  .then((result) => {
-    app.listen(3000);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+dbStartupAndThen(() => {app.listen(3000)}
+  , false //don't force changes
+  // , true //force changes
+);
