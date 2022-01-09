@@ -5,7 +5,6 @@ const { renderTemplate } = require('../helpers/route-handlers');
 exports.getHome = (req,res,next) => {
     Run.findAll()
     .then(runs => {
-        console.log(runs);
         res.render('run-home', { runnings: runs});
     });
 }; 
