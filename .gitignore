@@ -119,3 +119,5 @@ dist
 
 # cypress test videos
 *.mp4
+
+data/lifehealth.sqlite
